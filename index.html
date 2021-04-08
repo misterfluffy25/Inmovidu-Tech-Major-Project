@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<!--ASCII Characterset-->
+  <meta charset="utf-8">
+<!--View-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--Robots.txt-->
+  <meta name=”robots” content=”noindex, nofollow”>
+<!--Cache Control-->
+  <meta http-equiv="cache-control" content="no-cache"/>
+<!--Title Of the Website-->
+  <title>Dashboard | E-Shala.com</title>
+<!-- Font Awesome for FAVICONS -->
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-5.8.1-web/css/all.css">
+<!-- Bootstrap- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--Designning using Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+<!--CSS-3 Styling-->
+  <link href="dashboard.css" rel="stylesheet">
+<script src="<script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+<script>
+  function myLoading(){
+    alert("Content Loaded: Successfully");
+  }
+
+//Validation of Form
+function myValidation()                                    
+{ 
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["Telephone"];  
+    var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["Password"];  
+    var address = document.forms["RegForm"]["Address"];
+    var college = document.forms["RegForm"]["Address"];  
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Required- Name"); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    if (address.value == "")                               
+    { 
+        window.alert("Required-Address"); 
+        address.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Required- E-mail"); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (phone.value == "")                           
+    { 
+        window.alert("Required- Phone Number"); 
+        phone.focus(); 
+        return false; 
+    } 
+   
+    if (password.value == "")                        
+    { 
+        window.alert("Required- Should contain Uppercase|Lowercase|Special Character|Digits"); 
+        password.focus(); 
+        return false; 
+    } 
+    if (college.value == "")                        
+    { 
+        window.alert("Required- College Name"); 
+        college.focus(); 
+        return false; 
+   
+    if (what.selectedIndex < 1)                  
+    { 
+        alert("Required- Course"); 
+        what.focus(); 
+        return false; 
+    } 
+   
+    return true; 
+}
+
+//Buffle Effect
+ const text=baffle(".data");
+      text.set({
+        characters : '█<▓ ░█▒█▒ ░▒/░█ ▓▒▓ █/██▒ █▓█/ █▒█ ░█▒█ ▓░█▒',
+        speed: 120
+      });
+      text.start();
+      text.reveal(4000);
+
+</script>
+
+
+<!--CSS File-->
+<style>
+  body{
+    /*background: #e6e6e6;*/
+    background: black;
+  }
+
+/*For Alumni Cards*/
+  .cards{
+    padding: 50px;
+    color: white;
+    display: block;
+    display: flex;
+
+  }
+
+  .cards div{
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    background-color: #262626;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .cards div:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+  }
+
+  .cards div h3{
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: bold;
+  }
+
+  .cards div h3 p{
+   font-size: 15px;
+   text-align: center;
+   font-family: roboto; 
+  }
+/*For Registration Box*/
+  * {
+  box-sizing: border-box;
+}
+.container {
+  padding: 20px;
+  background-color: #737373;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  border: none;
+  background: ##4d4d4d;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #4d4d4d;
+  outline: none;
+}
+hr {
+  border: 1px solid #4d4d4d;
+  margin-bottom: 20px;
+}
+.registerbtn {
+  background-color: #4d4d4d;
+  color: white;
+  padding: 20px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #4d4d4d;
+  text-align: center;
+}
+/*Sign In Form*/
+.container1{
+  padding: 20px;
+  background-color: #737373;
+}
+
+.Welcome{
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: arial;
+  content: justify;
+  margin-top: 500px;
+}
+.parallax {
+  background-image: url("pictures.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+</style>
+</head>
+
+<body onload="myLoading();">
+<!--Particle Effect starts-->
+<div id="particles-js">
+  <div class="Welcome">
+  <p>Welcome</p>
+  </div>
+</div>
+<!--baffle effect starts-->
+<div class="button">
+  <a href="#" id="reveal" class="btn_reveal">Open</a>
+</div>
+<div>
+<script type="text/javascript" src="<script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+<script type="text/javascript">
+  const btnreveal=document.querySelector(".btn_reveal");
+  const text=baffle(".Welcome");
+  text.set({
+    characters:'//░ ▒██░> ██▒▒< █▒< ░░>▒▒ ░░/< █▒▓ ▒▓>▓ <<>▓',
+    speed: 120
+  });
+  text.start();
+  btnreveal.addEventListener("click", e =>{
+    text.reveal(2000);
+  });
+</script>
+</div>
+<div class="parallax"></div>
+</div>
+</div>
+<script type="text/javascript" src="particles.js"></script>
+<script type="text/javascript" src="app.js"></script>
+  <!-- navigation menu -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <button class="navbar-toggler " data-toggle="collapse" data-target="#menu"> 
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="fas fa-chart-bar"></i> DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i> e-Repository</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i>Quizs</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i> Forums</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i> IDE</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i> Discussion Log</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i> Help Center</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+            <i class="fas fa-network-wired"></i>Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="fas fa-users"></i> Instructor</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="fas fa-users"></i>Follow Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="fas fa-users"></i> Registrations</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+            <div class="dropdown">
+              <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" >
+                <i class="fas fa-id-badge"></i> Yashaswee</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Profile</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <a href="#" class="dropdown-item">Certificates</a>
+                <a href="#" class="dropdown-item">My Courses</a>
+                <a href="#" class="dropdown-item">Payment Records</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <!--navigation ends-->
+
+
+  <!--Button Section starts-->
+    <div class="bg-light p-3">
+     
+    <div class="row">
+       <div class="col-md-4">
+         <a href="" class="btn btn-primary d-block font-weight-bold">
+          <i></i> &nbsp;Search More</a>
+       </div>
+       <div class="col-md-4">
+         <a href="" class="btn btn-success d-block font-weight-bold">
+          <i></i> &nbsp; Bonus Section</a>
+       </div>
+       <div class="col-md-4">
+        <a href="" class="btn btn-warning d-block font-weight-bold">
+          <i></i> &nbsp;Courses</a>
+       </div>
+    </div>
+  </div>
+  <!--dashboard ends-->
+
+  
+  <!--dashboard content starts-->
+  <div class="container-fluid">
+    
+    <div class="row"> 
+      <div class="col-8">
+        <h2 style="background-color: purple;" class="text-white p-2 ">You May Like</h2>
+        <div class="container">
+        <!-- creating table -->
+        <table class="table mt-3">
+          <thead class="table-dark">
+            <tr>
+              <th>No.</th>
+              <th>Domain</th>
+              <th>Course</th>
+              <th>Last Updated</th>
+              <th>Length</th>
+              <th>Level</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Web-Development</td>
+              <td>Learn HTML-5</td>
+              <td>28 April 2020</td>
+              <td>24.8 Hrs.</td>
+              <td>Beginners</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Web Development</td>
+              <td>Learn CSS-3</td>
+              <td>30 April 2020</td>
+              <td>13.9 Hrs.</td>
+              <td>Beginners</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Cyber Security</td>
+              <td>Ethical Hacking</td>
+              <td>01 May 2020</td>
+              <td>30.0 Hrs.</td>
+              <td>Advanced</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Data Science</td>
+              <td>Machine Learning AL-ML</td>
+              <td>10 April 2020</td>
+              <td>44.0 Hrs.</td>
+              <td>Beginners</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details<i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Internet of Things</td>
+              <td>IOT devices Programming</td>
+              <td>10 April 2020</td>
+              <td>1505 Hrs.</td>
+              <td>Beginners</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Biotechology</td>
+              <td>Cell Morphology</td>
+              <td>03 April 2020</td>
+              <td>10 Hrs.</td>
+              <td>Intermidiate</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Cyber Security</td>
+              <td>Social Engineering</td>
+              <td>29 April 2020</td>
+              <td>35.3 Hrs.</td>
+              <td>Intermidiate</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Python Programming</td>
+              <td>Py-From Scratch</td>
+              <td>10 May 2020</td>
+              <td>24.4 Hrs.</td>
+              <td>Beginners</td>
+              <td><a href="#" class="btn btn-outline-secondary btn-sm">
+                 More Details <i></i>
+              </a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      <div class="col-md-4 mt-4">
+          <div class="card">
+            <div class=" bg-primary text-white p-4">
+              <i class="fas fa-list-ul fa-6x"></i>
+              <h2 class="float-right font-weight-bold" style="font-size: 50px; text-align: center;">01 <span class="d-block">Cyber Security</span></h2>
+            </div>
+            <div class="card-footer text-primary">
+              <h6 class="text-center"><a href=""> Continue.
+              <i class="fas fa-arrow-alt-circle-right"></i></h6></a>
+            </div>
+          </div>
+          <div class="card mt-5">
+            <div class=" bg-success text-white p-4 ">
+              <i class="fas fa-list-ul fa-6x"></i>
+              <h2 class="float-right font-weight-bold" style="font-size: 40px; text-align: center;">02 <span class="d-block">Flutter Programming</span></h2>
+            </div>
+            <div class="card-footer text-primary">
+              <h6 class="text-center"><a href=""> Completed!
+              <i class="fas fa-arrow-alt-circle-right"></i></h6></a>
+            </div>
+          </div>
+      </div> 
+    </div>
+<!--dashboard content starts-->
+
+
+<!--Alumni Cards starts-->
+<h1 style="text-align: center; color: white;"><strong>Our Shining Stars</strong></h1>
+<div class="cards" id="particles-js" style="position: relative;">
+  <div class="cards1">
+    <h3 class="cards_head">Akshay Malhotra</h3>
+      <p>Works in Google since- 2011</p>
+      <p>I would like to thank e-shala for teaching the latest concepts of web development, and helping me get my doubts clear. Their bonus section is some serious thing just try to unclock the bonus section, it will bring you closer to treasure of knowledge.<br>- Akshay Malhotra</p>
+  </div>
+  <div class="cards1">
+    <h3 class="cards_head">Jimmy De Anderson</h3>
+      <p>Works in Amazon since- 2010</p>
+      <p>Hey learner this is an alumni speaking presently working in Amazon-US I was an average chap before joining E-shala I am from Spain I would like to thank e-shala for teaching the latest concepts of web development. Even though being an spanish their English tutors taught me well and helped me in snatching decent package from Amazon-US, A very big thanks to you guys. Kudos to e-shala.com!!!<br>- Jimmy De Anderson</p>
+  </div>
+  <div class="cards1">
+    <h3 class="cards_head">Anita Singh</h3>
+      <p>Works in Amazon.IN since- 2013</p>
+      <p>Hello Aspirants this is Anita all the way from Amazon.IN From the beginning I wanted to do something in the field of Computer Science. While searching on internet i came across E-shala.com here is found some of the best instructors from around the whole world. Instructors on E-shala helped me in getting a kick start in python coding and helped me in acheiving my dreams job.<br>- Anita Singh</p>
+  </div>
+  <div class="cards1">
+    <h3 class="cards_head">Shrinetra S.</h3>
+      <p>Works in Adobe-UK since- 2015</p>
+      <p>Hello all, this is Shrinetra working in Adobe-UK since May 2015. Being a slow learner I know how it feels its like being a burden on others. But e-shala helped me in learning by their simplified learning pattern and self paced learning courses. I would suggest e-shala to all my juniors. Thats all for now. Thanks E-shala<br>- Shrinetra S.</p>
+  </div>
+</div>
+<!--Almumni cards stops-->
+
+
+<!--Registration form Starts-->
+<form>
+  <div class="registration">
+    <div class="container">
+      <h1><strong>Register- FOR BONUS SECTION.</strong></h1>
+      <p>Fill it to give it a shot for our Bonus Section.</p>
+        <hr>
+          <label for="email"><b>Enter E-mail*</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+          <label for="psw"><b>Write Password*</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          <label for="psw-repeat"><b>Confirm Password*</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+          <p>By Registering with us you agree to our- <a href="http://www.selcofoundation.org/wp-content/uploads/2017/04/e-Shala-Report.pdf">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+  </div>
+</form>
+<!--Regirattion forms ends-->
+
+
+<!--Sign In For Bonus Section starts-->
+<div class="container1">
+<h1 style="text-align: center"><strong>Sign IN Form</strong></h1>           
+  <form name="RegForm" action="/submit.php" onsubmit="return myValidation()" method="post">  
+      <p><strong>Name:</strong><input type="text" size=65 name="Name"> </p><br>        
+      <p><strong>Address:</strong><input type="text" size=65 name="Address">  </p><br> 
+      <p><strong>E-mail Address:</strong><input type="text" size=65 name="EMail">  </p><br> 
+      <p><strong>Password:</strong><input type="text" size=65 name="Password"> </p><br> 
+      <p><strong>Telephone:</strong><input type="text" size=65 name="Telephone"> </p><br>   
+      <p><strong>Your Course</strong>   
+        <select type="text" value="" name="Subject"> 
+            <option>B-TECH</option>
+            <option>M-TECH</option>
+            <option>BE</option> 
+            <option>BCA</option> 
+            <option>MCA</option> 
+            <option>ARC</option> 
+        </select></p><br><br> 
+      <p><strong>Comments:</strong><textarea cols="55" name="Comment">  </textarea></p> 
+      <p><input type="submit" value="Reset" name="Submit">      
+        <input type="reset" value="Submit" name="Reset">   
+      </p>          
+</form>
+</div>
+<!--Sign In for Bonus Section Ends-->
+
+
+<!-- footer start -->
+<footer class="bg-light text-dark p-5 mt-2">
+  <h1 class="text-center"><strong>All Rights are Reserved by &copy E-shala.com</strong></h1>
+    <p style="text-align: center;">Author:<strong>E-shala Tech</strong><br><strong>St. 25 India Gate New Delhi, IN</strong><br>110025<br>Contact:<strong>www.E-shala.com</strong></p>
+      <aside>
+        <h3 style="text-align: center;"><strong>About Us-</strong></h3>
+          <ol>
+            <li>We provide great piece of wisdom & knowledge for the enthusiactic learners, if you are curious to know about the world by learning things using our self paced courses <strong>JUST HOPE IN</strong></li>
+            <li>Sharing great piece of knowledge since the 90's but Well UPDATED with the 22nd cent.</li>
+            <li>We have about 50,000,000 active learner and still counting.</li>
+            <li>Our alumnis are working in FACEBOOK | GOOGLE | MICROSOFT | ADOBE | AMAZON and many more.</li>
+          </ol>
+      </aside>
+
+      <aside>
+        <h3 style="text-align: center;"><strong>Things we Provide-</strong></h3>
+          <ol>
+            <li>Quick replies: within 10 hrs. for queries.</li>
+            <li>Well Trained-Certified-Verfied Instructors.</li>
+            <li>Videos Available in: 240p | 360p | 480p | 1080p</li>
+            <li>Simplified content: for easy learning</li>
+            <li>Valid certification of completion</li>
+          </ol>
+      </aside>
+<div class="">
+  <h1>Our Progress Since-(In % Since 2000)</h1>
+    <label for="file">2000:</label>
+      <progress id="file" value="10" max="100"> 10% </progress>
+    <label for="file">2004:</label>
+      <progress id="file" value="29" max="100"> 29% </progress>
+    <label for="file">2008:</label>
+      <progress id="file" value="50" max="100"> 50% </progress>
+    <label for="file">2012:</label>
+      <progress id="file" value="55" max="100"> 55% </progress>
+    <label for="file">2016:</label>
+      <progress id="file" value="69" max="100"> 69% </progress>
+    <label for="file">2020:</label>
+      <progress id="file" value="73" max="100"> 73% </progress>
+    <!--<label for="file">2024:</label>
+      <progress id="file" value="80" max="100"> 80% </progress>-->
+</div>
+</footer>
+  <!-- footer ends here -->
+
+
+<!--Buffle Effect starts-->
+
+<!--Buffle Effect stops-->
+
+  <!-- /Start your project here-->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+</html>
